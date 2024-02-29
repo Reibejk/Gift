@@ -12,6 +12,16 @@ const hand = document.getElementById("hand");
 const poemButton = document.querySelector(".poem");
 const poem = document.querySelector("#poem");
 const head = document.querySelector(".head");
+const newHandShake = [
+  {transform: "rotate(-10deg)"},
+  {transform: "rotate(30deg)"},
+  {transform: "rotate(-10deg)"}, 
+];
+const handTiming = {
+  duration: 800,
+  iterations: 3,
+};
+
 
 function talk() {
   mouth.style.animation = "mouthMove 1s ease 6";
@@ -36,8 +46,8 @@ function hearts() {
 }
 
 function handShake() {
-  hand.style.animation = "handShake 0.5s ease 4";
-}
+  hand.animate(newHandShake, handTiming);
+};
 
 function showPoem() {
   poem.style.visibility = "visible";
