@@ -1,52 +1,53 @@
+const mouth = document.getElementById("mouth");
+const teeth = document.getElementById("teeth");
+const tongue = document.getElementById("tongue");
+const reye = document.getElementById("reye");
+const leye = document.getElementById("leye");
+const audio = document.querySelector("#audio");
+const body = document.querySelector(".body");
+const heart = document.querySelector(".heartBody");
+const wish = document.querySelector(".wish");
+const handMove = document.querySelector(".greet");
+const hand = document.getElementById("hand");
+const poemButton = document.querySelector(".poem");
+const poem = document.querySelector("#poem");
+const head = document.querySelector(".head");
 
 function talk() {
-  var mouth = document.getElementById("mouth");
-  mouth.style.animation = "mouthMove 1s ease 7";
-  var teeth = document.getElementById("teeth");
-  teeth.style.animation = "teethMove 1s ease 7";
-  var tongue = document.getElementById("tongue");
-  tongue.style.animation = "tongue 1s ease 7";
+  mouth.style.animation = "mouthMove 1s ease 6";
+  teeth.style.animation = "teethMove 1s ease 6";
+  tongue.style.animation = "tongue 1s ease 6";
 }
 
 function eyeBlink() {
-  var reye = document.getElementById("reye");
-  reye.style.animation = "eyeBlink 0.4s 7s 4";
-  var leye = document.getElementById("leye");
-  leye.style.animation = "eyeBlink 0.4s 7s 4";
+  reye.style.animation = "eyeBlink 0.4s 10s 4";
+  leye.style.animation = "eyeBlink 0.4s 10s 4";
 }
-
-
-
-/*document.getElementById("body").addEventListener("click", function talking() {
-  talk();
-  eyeBlink();
-})
-
-
 
 function talking() {
-  var talking = document.getElementById("body");
+  audio.play();
   talk();
   eyeBlink();
-  eyeBlink();
+  hearts();
 }
 
-
-/*talking.addEventListener("reset", talking());
-*/
-
-const body = document.querySelector(".body");
-
-function talking() {
-  talk();
-  eyeBlink();
+function hearts() {
+  heart.style.animation = "heartKiss 0.7s 6s ease 5";
 }
 
-
-body.addEventListener("click", talking); 
-body.style.property = "initial"; 
-
-function handMove() {
-  var hand = document.getElementById("hand");
-  hand.style.animation = "handShake 1s ease 4";
+function handShake() {
+  hand.style.animation = "handShake 0.5s ease 4";
 }
+
+function showPoem() {
+  poem.style.visibility = "visible";
+}
+
+function hidePoem() {
+  poem.style.visibility = "hidden";
+}
+
+poemButton.addEventListener("click", showPoem);
+poem.addEventListener("click", hidePoem);
+wish.addEventListener("click", talking); 
+handMove.addEventListener("click", handShake);
