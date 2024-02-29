@@ -426,3 +426,20 @@ body {
 }
 
 
+@media screen and (max-width: 480px) {
+  body {
+    scale: 0.7;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  body {
+    scale: 0.5;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  body {
+    scale: 0.4;
+  }
+}
