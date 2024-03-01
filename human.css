@@ -251,7 +251,7 @@ body {
   align-items: center;
   height: 100vh;
   margin-top: -200px;
-  margin-left: -90px;
+  margin-left: -30px;
   rotate: -30deg;
   transform-origin: bottom center;
 }
@@ -362,9 +362,9 @@ body {
 }
 
 @keyframes heartKiss {
-  0% {transform: scale(0) rotate(120deg); visibility: visible;};
-  50% {transform: scale(0.5) rotate(120deg); visibility: visible;};
-  100% {transform: scale(1) rotate(120deg); visibility: visible;};
+  0% {transform: scale(0); visibility: visible;};
+  50% {transform: scale(0.5); visibility: visible;};
+  100% {transform: scale(1); visibility: visible;};
 }
 
 .heartBody {
